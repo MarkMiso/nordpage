@@ -6,7 +6,7 @@
   the image I used and my overall desktop theme (see here:
   https://i.imgur.com/gxMdNKi.png).*/
   :root {
-	--red: #bf616a;
+	--purple: #b48ead;
 	--white: #d8dee9;
 	--blue: #5e81ac;
 
@@ -61,9 +61,9 @@ form input[type="search"] {
 	font: inherit;
 	margin-left: 12px;
 	width: 95%;
-	color: var(--blue);
+	color: var(--purple);
 	transition: all 0.2s;
-}	
+}
 
 form label {
 	color: var(--blue);
@@ -106,20 +106,20 @@ form:focus-within input::placeholder {
 }
 
 .link:hover {
-	color: var(--red);
+	color: var(--purple);
 	transition: all 0.4s;
 }
 
 .subtitle {
 	font-weight: bold;
-	color: var(--red);
+	color: var(--blue);
 }
 
 .title a {
 	font-weight: bold;
 	font-style: italic;
 	text-decoration: none;
-	color: var(--white);
+	color: var(--blue);
 }
 
 .image {

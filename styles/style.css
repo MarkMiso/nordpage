@@ -1,11 +1,7 @@
-/*This file is for the regular version of the startpage (file index.html)
-  The single page version has embedded styling for use with Firefox.
-  This version is also probably more often updated.*/
-
-/*Change these variables to match with your setup. These colors work for
-  the image I used and my overall desktop theme (see here:
-  https://i.imgur.com/gxMdNKi.png).*/
-:root {
+/*
+	import Nord theme colors
+*/ 
+  :root {
 	/*polar night*/
 	--gray1: #2e3440;
 	--gray2: #3b4252;
@@ -33,6 +29,9 @@
 	--search-bg: rgba(255, 255, 255, 0);
 }
 
+/*
+	dark theme
+*/
 .dark {
 	--bg: var(--gray1);
 	--fg: var(--gray2);
@@ -42,11 +41,14 @@
 	--links: var(--white1);
 }
 
+/*
+	light theme
+*/
 .light {
 	--bg: var(--white2);
 	--fg: var(--white1);
 
-	--text: var(--gray1);
+	--text: var(--gray3);
 	--accent: var(--blue);
 	--links: var(--gray4);
 }
@@ -70,8 +72,6 @@ p[class=credits] > a {
 	right: 10px;
 }
 
-/*Form based off of Vallode's work:
-  https://codepen.io/Vallode/pen/abdYLOd*/
 form {
 	margin: 1em 0;
 	position: relative;
@@ -100,10 +100,11 @@ form:focus-within input::placeholder {
 }
 
 #main_window {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	background-color: var(--fg);
 	width: 910px;
-	padding-right: 40px;
-	margin: 0;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -113,9 +114,9 @@ form:focus-within input::placeholder {
 }
 
 #content {
-	padding-top: 40px;
-	margin-left: 300px;
-
+	/*padding-top: 40px;*/
+	margin-left: 0px;
+	
 }
 
 #links_container {
@@ -167,43 +168,7 @@ form:focus-within input::placeholder {
 }
 
 /*
-  Transitions
-*/
-#fader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999999;
-    pointer-events: none;
-    background: var(--bg);
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes fade-out {
-    from { opacity: 1 }
-      to { opacity: 0 }
-}
-
-@keyframes fade-in {
-    from { opacity: 0 }
-      to { opacity: 1 }
-}
-
-#fader.fade-out {
-    opacity: 0;
-    animation-name: fade-out;
-}
-
-#fader.fade-in {
-    opacity: 1;
-    animation-name: fade-in;
-}
-
-/*
-  Media querries
+	Media querries
 */
 @media (max-width: 980px) {
 	img#leftImg {
@@ -218,11 +183,6 @@ form:focus-within input::placeholder {
 	ul {
 		padding-top: 0px;
 		margin-top: -7px;
-	}
-
-	#content {
-		padding-top: 0px;
-		margin-left: 220px;
 	}
 }
 

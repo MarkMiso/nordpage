@@ -5,6 +5,7 @@ const baseStyle = links[0].style;
 
 var pos = 0;
 
+// check if the move is legal, if so moves the indicator to newPose 
 function move(newPos) {
     if ((newPos >= 0) && (newPos < links.length) && 
     (newPos%rowElementsNumber != 0 || pos%rowElementsNumber != rowElementsNumber - 1) &&
@@ -15,6 +16,11 @@ function move(newPos) {
     }
 }
 
+/* 
+    called when a key is pressed
+    if in insert mode (the search bar is selected) and Esc is pressed switches to vim mode, else does nothing
+    if in vim mode and i is pressed switches to insert mode, else allows movement trough links via vim keys
+*/
 window.addEventListener('keydown', (e) => {
     const keyName = e.key;
 
@@ -54,6 +60,11 @@ window.addEventListener('keydown', (e) => {
     }
 }, false);
 
+/*
+    called when mouse clicks
+    if insert mode (the search bar is selected) removes indicator from links
+    if in vim mode does nothing
+*/
 window.addEventListener('click', e => {
     if (document.activeElement.id === 'q') {
         links[pos].setAttribute('style', baseStyle);

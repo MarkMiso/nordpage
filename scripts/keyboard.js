@@ -11,7 +11,7 @@ function move(newPos) {
     (newPos%rowElementsNumber != rowElementsNumber - 1 || pos%rowElementsNumber != 0)) {
         links[pos].setAttribute('style', baseStyle);
         pos = newPos;
-        links[pos].setAttribute('style', 'color: var(--purple);');
+        links[pos].setAttribute('style', 'color: var(--accent);');
     }
 }
 
@@ -21,7 +21,7 @@ window.addEventListener('keydown', (e) => {
     if (document.activeElement.id === 'q') {
         if (keyName === 'Escape') {
             document.activeElement.blur();
-            links[pos].setAttribute('style', 'color: var(--purple);');
+            links[pos].setAttribute('style', 'color: var(--accent);');
         }
 
     } else {

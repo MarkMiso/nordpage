@@ -5,32 +5,56 @@
 /*Change these variables to match with your setup. These colors work for
   the image I used and my overall desktop theme (see here:
   https://i.imgur.com/gxMdNKi.png).*/
-  :root {
-	--purple: #b48ead;
-	--white: #d8dee9;
+:root {
+	/*polar night*/
+	--gray1: #2e3440;
+	--gray2: #3b4252;
+	--gray3: #434c5e;
+	--gray4: #4c566a;
+
+	/*snow storm*/
+	--white1: #d8dee9;
+	--white2: #e5e9f0;
+	--white3: #eceff4;
+
+	/*frost*/
 	--blue: #5e81ac;
+	--light-blue: #81a1c1;
+	--acqua-blue: #88c0d0;
+	--acqua-green: #8fbcbb;
 
-	--bg: #2e3440;
-	--fg: #3b4252;
-
-	--search-bg: rgba(255, 255, 255, 0);
-	}
-
-.lightmode {
-	--red: #5f605b;
-	--white: #7f807b;
-	--blue: #494846;
-
-	--bg: #f0f0f0;
-	--fg: #e7e7e7;
+	/*aurora*/
+	--red: #bf616a;
+	--orange: #d08770;
+	--yellow: #ebcb8b;
+	--green: #a3be8c;
+	--magenta: #b48ead;
 
 	--search-bg: rgba(255, 255, 255, 0);
+}
+
+.dark {
+	--bg: var(--gray1);
+	--fg: var(--gray2);
+
+	--text: var(--blue);
+	--accent: var(--magenta);
+	--links: var(--white1);
+}
+
+.light {
+	--bg: var(--white2);
+	--fg: var(--white1);
+
+	--text: var(--gray1);
+	--accent: var(--blue);
+	--links: var(--gray4);
 }
 
 body {
 	background-color: var(--bg);
 	font-family: 'Space Mono', monospace;
-	color: var(--blue);
+	color: var(--text);
 	transition: all 0.25s ease-out;
 }
 
@@ -61,12 +85,12 @@ form input[type="search"] {
 	font: inherit;
 	margin-left: 12px;
 	width: 95%;
-	color: var(--purple);
+	color: var(--accent);
 	transition: all 0.2s;
 }
 
 form label {
-	color: var(--blue);
+	color: var(--text);
 	position: absolute;
 	transition: all 0.4s;
 }
@@ -102,24 +126,24 @@ form:focus-within input::placeholder {
 .link{
 	text-decoration: none;
 	transition: all 0.4s;
-	color: var(--white);
+	color: var(--links);
 }
 
 .link:hover {
-	color: var(--purple);
+	color: var(--accent);
 	transition: all 0.4s;
 }
 
 .subtitle {
 	font-weight: bold;
-	color: var(--blue);
+	color: var(--text);
 }
 
 .title a {
 	font-weight: bold;
 	font-style: italic;
 	text-decoration: none;
-	color: var(--blue);
+	color: var(--text);
 }
 
 .image {
@@ -135,7 +159,7 @@ form:focus-within input::placeholder {
 
 .bottom a {
 	text-decoration: none;
-	color: var(--blue);
+	color: var(--text);
 }
 
 .bottom a:hover {

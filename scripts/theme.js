@@ -1,5 +1,5 @@
 const body = document.body;
-const switchTeme = document.getElementById('swhitch-theme');
+const switchTeme = document.getElementById('switch-theme');
 const theme = localStorage.getItem('theme');
 
 // set saved theme

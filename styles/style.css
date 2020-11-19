@@ -1,5 +1,10 @@
 /*
-	import Nord theme colors
+	import font
+*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap');
+
+/*
+	Nord theme colors
 */ 
 :root {
 	/*polar night*/
@@ -57,7 +62,7 @@
 
 body {
 	background-color: var(--bg);
-	font-family: 'Space Mono', monospace;
+	font-family: 'Fira Mono', monospace;
 	color: var(--text);
 	transition: all 0.25s ease-out;
 	padding: 0;

@@ -190,6 +190,7 @@ footer ul {
 	height: 2rem;
 	user-select: none;
 	font-size: 0.7rem;
+	font-weight: bold;
 	text-decoration: none;
 	color: var(--text);
 	transition: all 0.4s;
@@ -197,7 +198,6 @@ footer ul {
 
 .foot_link svg {
 	width: 1rem;
-	
 }
 
 .foot_link:hover {

@@ -42,5 +42,7 @@ I've just started web developement so don't expect impeccable code quality.
 If you find any bugs and/or have suggestion on how to improove the page don't hasitate to contact me.
 
 This page was more than inspired by [wlfys-minimal-startpage](https://gitlab.com/wolfiy/wlfys-minimal-startpage).
+
 The icon font used is [font awesome](https://fontawesome.com).
+
 The image used is from Stephan Seeber and you can find it [here](https://www.pexels.com/photo/snow-covered-mountain-peak-1130847/).
